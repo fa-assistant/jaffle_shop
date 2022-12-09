@@ -80,3 +80,18 @@ models:
         description: Amount of the order (AUD) paid for by gift card
         tests:
           - not_null
+
+exposures:
+  - name: weekly_jaffle_metrics
+    type: dashboard
+    maturity: high
+    description: >
+      Did someone say "exponential growth"?
+
+    depends_on:
+      - ref('orders')
+      - ref('customers')
+
+    owner:
+      name: Topher
+      email: christopher.hindman@dbtlabs.com
