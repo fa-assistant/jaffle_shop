@@ -1,0 +1,3 @@
+packages:
+  - git: "file:///tmp/does-not-exist.git"
+    revision: main
